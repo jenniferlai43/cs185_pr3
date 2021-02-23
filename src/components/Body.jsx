@@ -24,7 +24,6 @@ class Body extends React.Component {
   render() {
     const activeId = this.props.active;
     const tabInfo = this.props.tabs[activeId];
-    console.log(tabInfo);
 
     return (
       <div>

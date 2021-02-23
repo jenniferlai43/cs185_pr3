@@ -1,15 +1,19 @@
 /* eslint no-undef: 0 */ // --> OFF
 import React from 'react';
+import Tab from './Tab';
 
 class Nav extends React.Component {
   	render() {
-  		console.log(this.props.active);
     	return (
       		<div>
       			<ul>
-					{this.props.tabs.map((tab, i) => {
-	          			return <li key={i} className={(this.props.active === tab.id ? 'active-tab' : '')} onClick = {this.props.changeTab.bind(this,tab.id)}>{tab.title}</li>;
-	        		})}
+					{this.props.tabs.map((tab, i) => 
+						(<Tab 	key={i}
+								index={i}
+	        					active={this.props.active === tab.id}
+	        					changeTab={this.props.changeTab}
+	        					title={tab.title} />)
+					)}
 				</ul>
       		</div>
   		);

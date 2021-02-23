@@ -64,7 +64,7 @@ class EmailPage extends React.Component {
 					<input className='button sub-button' type='submit' value='Submit' />
 				</form>
 				<br/>
-				{this.state.vMsg != '' && <Validation msg={this.state.vMsg} color={this.state.vMsgColor}/>}
+				{this.state.vMsg !== '' && <Validation msg={this.state.vMsg} color={this.state.vMsgColor}/>}
 	      </div>
 	    );
 	}
