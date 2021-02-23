@@ -36,3 +36,138 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  font-family: "Courier New";
+}
+
+ul {
+  background-color: darkgray;
+  display: flex;
+  list-style: none;
+}
+
+ul li{
+  background-color: darkgray;
+  text-decoration: none;
+  padding: 15px;
+  float: left;
+  color: white;
+}
+
+ul li:hover{
+  background-color: lightgray;
+  cursor: pointer;
+}
+
+.active-tab {
+  background-color: lightgray;
+  text-decoration: underline;
+}
+
+.vgallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.vgallery .evid {
+  margin: 1vh 2vw;
+}
+
+.igallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items:center;
+}
+
+.igallery .img-wrap {
+  text-align: center;
+  margin: 1vh 5vw;
+  flex: 1;
+}
+
+.igallery img {
+  width: 150px;
+}
+
+table, td, th {  
+  border: 1px solid black;
+  text-align: left;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 15px;
+}
+
+.button {
+  background-color: lightblue;
+  border-radius: 10%;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.button:hover {
+ background-color: darkblue;
+}
+
+/* Source/Inspiration: https://www.youtube.com/watch?v=4SQXOA8Z-lo */
+.modal {
+  display: none;
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.9); 
+}
+
+.overlay-img {
+  margin: auto;
+  display: block;
+  min-height: 60vh;
+  max-height: 60vh;
+}
+
+.overlay-vid {
+  margin: auto;
+  display: block;
+  min-height: 60vh;
+  max-height: 60vh;
+}
+
+/* Source/Inspiration: https://dev.to/ljcdev/scroll-to-top-button-in-vanilla-js-beginners-2nc */
+.btt-button {
+  width: 100px;
+  height: 50px;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1;
+  /*display: none;*/
+}
+
+.vmsg {
+  color: black;
+  margin: 5vh 0;
+  /*display: none;*/
+}
+
+.vmsg span {
+  padding: 5vh;
+  border: 1px black solid;
+  border-radius: 10px;
+  background-color: lightgreen;
+}
+
