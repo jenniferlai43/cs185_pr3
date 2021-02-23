@@ -6,7 +6,7 @@ import TablePage from './TablePage';
 import EmailPage from './EmailPage';
 
 class Body extends React.Component {
-  displayTab = (id) => {
+  displayTab(id) {
     if (id === 0) {
       return <TextPage />
     } else if (id === 1) {

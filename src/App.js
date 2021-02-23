@@ -40,7 +40,7 @@ class App extends React.Component {
     };
   }
 
-  changeTab = (id) => {
+  changeTab(id) {
     this.setState({
       activeId: id
     });

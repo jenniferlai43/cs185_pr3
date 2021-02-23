@@ -2,7 +2,7 @@ import React from 'react';
 
 class VideoPage extends React.Component {
 
-	handleClick = (e) => {
+	handleClick(e) {
 		e.preventDefault();
 		const modal = document.querySelector('.modal');
 		const modalVid = document.querySelector('.overlay-vid');
@@ -19,7 +19,7 @@ class VideoPage extends React.Component {
 	    modal.style.display = "flex";
 	}
 
-	handleModalClick = (e) => {
+	handleModalClick(e) {
 		const modal = document.querySelector('.modal');
 		modal.style.display = "none";
 	}

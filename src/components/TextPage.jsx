@@ -15,11 +15,11 @@ class TextPage extends React.Component {
 	    this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	resetForm = () => {
+	resetForm() {
 		this.setState(this.baseState)
 	}
 
-	handleChange = (e) => {
+	handleChange(e) {
 	    const value = e.target.value;
   		this.setState({
 		    ...this.state,
@@ -28,13 +28,13 @@ class TextPage extends React.Component {
 	}
 
 
-	handleOptionChange = (changeEvent) => {
+	handleOptionChange(changeEvent) {
 	  this.setState({
 	    animal: changeEvent.target.value
 	  });
 	}
 
-	handleSubmit = (event) => {
+	handleSubmit(event) {
 	    console.log('Submitted form');
 	    event.preventDefault();
 	    this.resetForm()

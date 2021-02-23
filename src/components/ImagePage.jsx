@@ -2,7 +2,7 @@ import React from 'react';
 
 class ImagePage extends React.Component {
 
-	handleClick = (e) => {
+	handleClick(e){
 		const modal = document.querySelector('.modal');
 		const modalImg = document.querySelector('.overlay-img');
 		console.log(e.target);
@@ -11,7 +11,7 @@ class ImagePage extends React.Component {
 		modal.style.display = 'flex';
 	}
 
-	handleModalClick = (e) => {
+	handleModalClick(e) {
 		const modal = document.querySelector('.modal');
 		modal.style.display = "none";
 	}
