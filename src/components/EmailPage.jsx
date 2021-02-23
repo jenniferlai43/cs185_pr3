@@ -1,3 +1,4 @@
+/* eslint no-undef: 0 */ // --> OFF
 import React from 'react';
 import Validation from './Validation';
 
@@ -16,11 +17,11 @@ class EmailPage extends React.Component {
 	    this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
-	resetForm(){
+	resetForm = () => {
 		this.setState(this.baseState)
 	}
 
-	handleChange(e) {
+	handleChange = (e) => {
 	    const value = e.target.value;
   		this.setState({
 		    ...this.state,
@@ -28,7 +29,7 @@ class EmailPage extends React.Component {
 		});
 	}
 
-	validateMessage() {
+	validateMessage = () => {
 		const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     	const valid = re.test(this.state.email.toLowerCase());
     	if (valid && (this.state.email.endsWith(".com") || this.state.email.endsWith(".edu"))) {
@@ -44,7 +45,7 @@ class EmailPage extends React.Component {
     	}
 	}
 
-	handleSubmit(e) {
+	handleSubmit = (e) => {
 	    console.log('Submitted form');
 	    e.preventDefault();
 	    this.resetForm();

@@ -1,3 +1,4 @@
+/* eslint no-undef: 0 */ // --> OFF
 import React from 'react';
 import logo from './logo.svg';
 import Nav from './components/Nav';
@@ -40,11 +41,11 @@ class App extends React.Component {
     };
   }
 
-  changeTab(id) {
+  changeTab = (id) => {
     this.setState({
       activeId: id
     });
-  };
+  }
 
   render() {
     

@@ -1,3 +1,4 @@
+/* eslint no-undef: 0 */ // --> OFF
 import React from 'react';
 import TextPage from './TextPage';
 import ImagePage from './ImagePage';
@@ -6,7 +7,7 @@ import TablePage from './TablePage';
 import EmailPage from './EmailPage';
 
 class Body extends React.Component {
-  displayTab(id) {
+  displayTab = (id) => {
     if (id === 0) {
       return <TextPage />
     } else if (id === 1) {

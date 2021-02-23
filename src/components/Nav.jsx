@@ -1,3 +1,4 @@
+/* eslint no-undef: 0 */ // --> OFF
 import React from 'react';
 
 class Nav extends React.Component {

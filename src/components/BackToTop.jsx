@@ -1,3 +1,4 @@
+/* eslint no-undef: 0 */ // --> OFF
 import React, { useEffect, useState } from "react";
 
 export default function BackToTop() {
