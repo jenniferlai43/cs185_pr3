@@ -171,3 +171,31 @@ th, td {
   background-color: lightgreen;
 }
 
+.manager {
+  border: 1px black solid;
+  display: inline-block;
+  width: 80%;
+  padding: 50px;
+}
+
+.task {
+  background-color: lightgray;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+  position: relative;
+}
+
+.task h3 {
+  font-size: 1em;
+  overflow-wrap: break-word;
+}
+
+.task .delete {
+  position:absolute;
+  right:5px;
+  top:5px;
+  background-color: white;
+  border: 1px black solid;
+  padding: 1px;
+}

@@ -1,11 +1,11 @@
 /* eslint no-undef: 0 */ // --> OFF
 import Task from './Task';
 
-const Tasks = ({tasks, onDelete, onUpdate}) => {
+const Tasks = ({tasks, onDelete, onDoubleClick}) => {
 	return (
 		<div>
 			{tasks.map((task) =>
-				<Task key={task.id} task={task} onDelete={onDelete} onUpdate={onUpdate}/>)}
+				<Task key={task.id} task={task} onDelete={onDelete} onDoubleClick={onDoubleClick}/>)}
 		</div>
 	);
 };
