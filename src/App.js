@@ -30,6 +30,11 @@ const tabs = [{
   id: 4,
   title: 'Email Page',
   caption: 'Email Validation form!'
+},
+{
+  id: 5,
+  title: 'Zoom Meeting Manager',
+  caption: 'Zoom Meeting Manager!'
 }];
 
 

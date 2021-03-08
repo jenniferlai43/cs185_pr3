@@ -5,6 +5,7 @@ import ImagePage from './ImagePage';
 import VideoPage from './VideoPage';
 import TablePage from './TablePage';
 import EmailPage from './EmailPage';
+import ZoomManagerPage from './ZoomManagerPage';
 
 class Body extends React.Component {
   displayTab = (id) => {
@@ -16,8 +17,10 @@ class Body extends React.Component {
       return <VideoPage />
     } else if (id === 3) {
       return <TablePage />
-    } else {
+    } else if (id === 4) {
       return <EmailPage />
+    } else {
+      return <ZoomManagerPage />
     }
   }
 
