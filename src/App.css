@@ -217,8 +217,8 @@ th, td {
   cursor: pointer;
   /*background-color: #a56969;*/
   box-shadow: 
-    inset -3.5em 0 0 0 #a56969,
-    inset 3.5em 0 0 0 #a56969;  
+    inset -4vw 0 0 0 #a56969,
+    inset 4vw 0 0 0 #a56969;  
   border-color: #a56969;
   color: #fff;
 }
@@ -243,8 +243,8 @@ th, td {
 
 .manager button:hover{
   box-shadow: 
-    inset -6.5em 0 0 0 #498ba0,
-    inset 6.5em 0 0 0 #498ba0;  
+    inset -8vw 0 0 0 #498ba0,
+    inset 8vw 0 0 0 #498ba0;  
   border-color: #498ba0;
   color: #fff;
   cursor:pointer;
@@ -269,8 +269,8 @@ th, td {
 
 .submit:hover{
   box-shadow: 
-    inset -6.5em 0 0 0 #62a049,
-    inset 6.5em 0 0 0 #62a049;  
+    inset -8vw 0 0 0 #62a049,
+    inset 8vw 0 0 0 #62a049;  
   border-color: #62a049;
   color: #fff;
   cursor:pointer;
@@ -293,8 +293,8 @@ th, td {
 
 .text-in:focus {
   box-shadow: 
-    inset -15em 0 0 0 #ededed,
-    inset 15em 0 0 0 #ededed;  
+    inset -18vw 0 0 0 #ededed,
+    inset 18vw 0 0 0 #ededed;  
   border-color: #ededed;
   color: black;
   cursor:pointer;
