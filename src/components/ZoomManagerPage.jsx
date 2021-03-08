@@ -92,7 +92,7 @@ const ZoomManagerPage = () => {
 	console.log('viewUpdate: ', viewUpdate);
     return (
       <div className="manager">
-      	<button onClick={toggleView}>{viewMode === 0 ? "Add Meeting" : "View Schedule"}</button>
+      	<button onClick={toggleView}>{viewMode === 0 ? "Add Meeting >>" : "<< View Schedule"}</button>
       	{viewUpdate && updateForm}
       	{!viewUpdate && viewPage}
       </div>

@@ -1,65 +1,93 @@
 /* eslint no-undef: 0 */ // --> OFF
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
+import ErrorBanner from './ErrorBanner';
 
 const UpdateTask = ({oldTask, onUpdate}) => {
-	// let oldTask = {
-	// 	"title": 'hi',
-	// 	"day": '342423',
-	// 	"important": false
-	// }
-
 	const [title, setTitle] = useState(oldTask.title || '');
 	const [day, setDay] = useState(oldTask.day || '');
 	const [textInfor, setTextInfor] = useState(oldTask.textInfor || '');
 	const [important, setImportant] = useState(oldTask.important || false);
-	// console.log(title, day, important)
-	// console.log(typeof important);
+	const [errorMsgs, setErrorMsgs] = useState([]);
 
-	// useEffect(() => {
-	// 	setTitle(title);
-	// 	setDay(day);
-	// 	setImportant(important);
-	// }, []);
 
 	const onSubmit = (e) => {
 		e.preventDefault();
-		console.log('submitting ', important);
-		onUpdate(oldTask.id, title, day, important, textInfor);
+		let errors = validateForm();
+		console.log(errors);
+		if (errors.length > 0) {
+			setErrorMsgs(errors);
+		} else {
+			onUpdate(oldTask.id, title, day, important, textInfor);
+		}
+	};
+
+	const clearErrorMsgs = () => {
+		setErrorMsgs([]);
+	};
+
+	const checkTitle = () => {
+		return (title.length <= 30 && title.length > 0);
+	};
+
+	const checkDate = () => {
+		var parseDate = new Date(day).getTime();  //change string into Date object into milliseconds
+		var nowDate = Date.now();
+		return (parseDate > nowDate);
+	};
+
+	const checkLink = () => {
+		return (textInfor.startsWith('http') && textInfor.includes('zoom'))
+	}
+
+	const validateForm = () => {
+		let errors = [];
+		if (!checkTitle()) {
+			errors.push(0);
+		}
+		if (!checkLink()) {
+			errors.push(1);
+		}
+		if (!checkDate()) {
+			errors.push(2);
+		}
+		return errors;
 	};
 
 	return (
 		<form onSubmit={onSubmit}>
-			<div>
+			<div className="form-div">
 				<label>Meeting</label><br/>
-				<input type='text'
+				<input className="text-in"
+						type='text'
 						placeholder='Add meeting name'
 						value={title}
 						onChange={(e) => setTitle(e.target.value)} />
 			</div>
-			<div>
+			<div className="form-div">
 				<label>Link</label><br/>
-				<input type='text'
+				<input className="text-in"
+						type='text'
 						placeholder='Add link'
 						value={textInfor}
 						onChange={(e) => setTextInfor(e.target.value)} />
 			</div>
-			<div>
-				<label>Date</label><br/>
-				<input type='text'
-						placeholder='Add date'
-						value={day}
-						onChange={(e) => setDay(e.target.value)} />
+			<div className="form-div">
+				<label>Day</label><br/>
+				<input className="text-in"
+						type="datetime-local"
+						id="meeting-time"
+       					value={day}
+       					onChange={(e) => setDay(e.target.value)} />
 			</div>
-			<div>
+			<div className="form-div">
 				<label>Important</label>
 				<input type='checkbox'
 						checked={important}
 						value={important}
-						onChange={(e) => {
-							setImportant(e.target.checked);
-						}} />
+						onChange={(e) => setImportant(e.target.checked)} />
 			</div>
-			<input type='submit' value='Save'/>
+			{errorMsgs.length > 0 && <ErrorBanner errors={errorMsgs} />}<br/>
+			<input className="submit" type='submit' value='Save'/>
 		</form>
 	);
 };

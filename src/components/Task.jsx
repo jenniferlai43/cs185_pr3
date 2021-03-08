@@ -2,15 +2,13 @@
 
 const Task = ({task, onDelete, onDoubleClick}) => {
 	return (
-		<div className="task" onDoubleClick={() => onDoubleClick(task.id)}>
-			<h3> {task.title}
+		<div className={`task ${task.important ? "important" : ""}`} onDoubleClick={() => onDoubleClick(task.id)}>
+			<h3> {task.title} </h3>
 				<div className="delete" onClick={() => onDelete(task.id)}>
 					Delete
 				</div>
-			</h3>
 			<p>{task.day}</p>
 			<a target='_blank' href={task.textInfor}>{task.textInfor}</a>
-			{task.important && <p>Important</p>}
 		</div>
 	);
 };

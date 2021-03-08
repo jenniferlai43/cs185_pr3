@@ -184,6 +184,13 @@ th, td {
   margin: 10px;
   text-align: left;
   position: relative;
+  transition: 0.3s;
+  padding-bottom: 25px;
+}
+
+.task:hover {
+  background-color: #f7f7f7;
+  cursor: pointer;
 }
 
 .task h3 {
@@ -196,6 +203,127 @@ th, td {
   right:5px;
   top:5px;
   background-color: white;
-  border: 1px black solid;
+  border: 2px solid #a56969;
+  color: #a56969;
   padding: 1px;
+  transition: 0.3s;
+  font-size: 0.8em;
+  width: 10%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.delete:hover {
+  cursor: pointer;
+  /*background-color: #a56969;*/
+  box-shadow: 
+    inset -3.5em 0 0 0 #a56969,
+    inset 3.5em 0 0 0 #a56969;  
+  border-color: #a56969;
+  color: #fff;
+}
+
+.important {
+  border-left: 8px green solid;
+}
+
+.manager button {
+  height: 4em;
+  width: 20%;
+  padding: 1.5em auto;
+  margin: 1em auto;
+  background-color: white;
+  border: 2px solid #498ba0;
+  color: #498ba0;
+  border-radius: 3px;
+  transition: 0.3s;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.manager button:hover{
+  box-shadow: 
+    inset -6.5em 0 0 0 #498ba0,
+    inset 6.5em 0 0 0 #498ba0;  
+  border-color: #498ba0;
+  color: #fff;
+  cursor:pointer;
+}
+
+.manager button:focus{
+    outline: none;
+}
+
+.submit {
+  width: 20%;
+  padding: 1.5em auto;
+  margin: 1em auto;
+  background-color: white;
+  border: 2px solid #62a049;
+  color: #62a049;
+  border-radius: 3px;
+  transition: 0.3s;
+  font-family: inherit;
+  font-weight: bold;
+}
+
+.submit:hover{
+  box-shadow: 
+    inset -6.5em 0 0 0 #62a049,
+    inset 6.5em 0 0 0 #62a049;  
+  border-color: #62a049;
+  color: #fff;
+  cursor:pointer;
+}
+
+.submit button:focus{
+    outline: none;
+}
+
+.text-in{
+  border: 0;
+  width: 40%;
+  padding: 7px 15px;
+  border: 1px solid #ccc;
+  position: relative;
+  background: transparent;
+  transition: 0.3s;
+  font-family: inherit;
+}
+
+.text-in:focus {
+  box-shadow: 
+    inset -15em 0 0 0 #ededed,
+    inset 15em 0 0 0 #ededed;  
+  border-color: #ededed;
+  color: black;
+  cursor:pointer;
+  outline: none;
+}
+
+.form-div {
+  margin: 10px;
+}
+
+.manager .errors{
+  display:inline-grid;
+  font-size: 0.8em;
+  color: black;
+  background-color: transparent;
+  margin: 0px;
+}
+
+.manager .errors li {
+  color: black;
+  list-style: disc;
+  cursor: default;
+  background-color: transparent;
+  padding: 5px;
+}
+
+.error-banner {
+  border: 1px solid #a56969;
+  background-color: #f19696;
+  display: inline-block;
+  padding: 10px 0px 20px 0px;
 }
