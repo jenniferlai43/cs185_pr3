@@ -1,6 +1,7 @@
 /* eslint no-undef: 0 */ // --> OFF
 import {useState} from 'react';
 import ErrorBanner from './ErrorBanner';
+import SuccessBanner from './SuccessBanner';
 
 const UpdateTask = ({oldTask, onUpdate}) => {
 	const [title, setTitle] = useState(oldTask.title || '');
@@ -8,6 +9,7 @@ const UpdateTask = ({oldTask, onUpdate}) => {
 	const [textInfor, setTextInfor] = useState(oldTask.textInfor || '');
 	const [important, setImportant] = useState(oldTask.important || false);
 	const [errorMsgs, setErrorMsgs] = useState([]);
+	const [successMsg, setSuccessMsg] = useState('');
 
 
 	const onSubmit = (e) => {
@@ -16,8 +18,11 @@ const UpdateTask = ({oldTask, onUpdate}) => {
 		console.log(errors);
 		if (errors.length > 0) {
 			setErrorMsgs(errors);
+			setSuccessMsg('');
 		} else {
 			onUpdate(oldTask.id, title, day, important, textInfor);
+			setSuccessMsg('Successfully updated entry.');
+			clearErrorMsgs();
 		}
 	};
 
@@ -86,7 +91,8 @@ const UpdateTask = ({oldTask, onUpdate}) => {
 						value={important}
 						onChange={(e) => setImportant(e.target.checked)} />
 			</div>
-			{errorMsgs.length > 0 && <ErrorBanner errors={errorMsgs} />}<br/>
+			{errorMsgs.length > 0 && <div><ErrorBanner errors={errorMsgs} /><br /></div>}
+			{successMsg !== '' && <div><SuccessBanner sMsg={successMsg} /><br /></div>}
 			<input className="submit" type='submit' value='Save'/>
 		</form>
 	);
