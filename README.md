@@ -9,5 +9,6 @@
 	- Double click on a meeting to update its details
 	- Click on the delete button on a meeting to delete it from the db
 6. You can access the local JSON db with ```http://localhost:5000/tasks``` which should display the JSON format of the DB and accurately reflect any DB updates made via the React frontend.
+7. ```idb.json``` contains intial db state, and can be copy-and-pasted into db.json if necessary (e.g. if you want to revert db.json to the initial state provided by the PR4 requirements).
 
 Note: Double clicking on a meeting will render a form on the page to update its details. You can return back to the full schedule by clicking the "<< View Schedule" button.

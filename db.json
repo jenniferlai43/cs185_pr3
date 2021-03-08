@@ -1,25 +1,32 @@
 {
   "tasks": [
     {
-      "title": "asdasd",
-      "day": "2021-03-19T12:34",
-      "textInfor": "http://zoom",
+      "id": 1,
       "important": true,
-      "id": 1
+      "title": "CS 185 Misha's Office Hour",
+      "day": "2021-03-05T19:00",
+      "textInfor": "https://ucsb.zoom.us/j/86623368970"
     },
     {
-      "title": "dafasdf",
-      "day": "2021-03-26T12:44",
+      "id": 2,
+      "important": true,
+      "title": "CS 185 Wenda's Office Hour",
+      "day": "2021-03-05T09:00",
+      "textInfor": "https://ucsb.zoom.us/j/8311826784"
+    },
+    {
+      "id": 3,
       "important": false,
-      "textInfor": "http://zoom",
-      "id": 2
+      "title": "Game Night",
+      "day": "2021-03-05T23:00",
+      "textInfor": "https://ucsb.zoom.us/j/8311826784"
     },
     {
-      "title": "a",
-      "day": "2021-03-16T12:44",
-      "important": true,
-      "textInfor": "http://zoom",
-      "id": 3
+      "title": "new meeting",
+      "day": "2021-02-27T00:30",
+      "textInfor": "https://ucsb.zoom.us/j/8311826784",
+      "important": false,
+      "id": 4
     }
   ]
 }
