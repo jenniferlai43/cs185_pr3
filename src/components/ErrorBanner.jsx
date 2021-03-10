@@ -11,7 +11,7 @@ const ErrorBanner = (({errors}) => {
 		},
 		{
 			id: 1,
-			msg: "Link must contains keywords 'http' and 'zoom'."
+			msg: "Link must be in valid format and contain keyword 'zoom'."
 		},
 		{
 			id: 2,

@@ -41,7 +41,7 @@ const UpdateTask = ({oldTask, onUpdate}) => {
 	};
 
 	const checkLink = () => {
-		return (textInfor.startsWith('http') && textInfor.includes('zoom'))
+		return (textInfor.length > 0 && textInfor.includes('zoom'))
 	}
 
 	const validateForm = () => {
@@ -71,7 +71,7 @@ const UpdateTask = ({oldTask, onUpdate}) => {
 			<div className="form-div">
 				<label>Link</label><br/>
 				<input className="text-in"
-						type='text'
+						type='url'
 						placeholder='Add link'
 						value={textInfor}
 						onChange={(e) => setTextInfor(e.target.value)} />
